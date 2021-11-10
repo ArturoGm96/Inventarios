@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inventarios</title>
+    <link rel="shortcut icon" href="./img/icono.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <div class="container-fluid">
+        <h1 id="title">Sistema de Inventarios</h1>
+
+        <div id="cajon">
+            <div id="panel1">
+                <h3>INGRESA AQUI TUS INVENTARIOS</h3>
+                
+                <div id="txt">
+                    <label for="txtCodigo">Codigo del producto:</label>
+                    <br><br>
+                    <label for="txtNombre">Nombre del producto:</label>
+                    <br><br>
+                    <label for="txtPrecio">Precio del producto:</label>
+                    <br><br>
+                    <label for="txtInventario">Cantidad del producto:</label>
+                    <br><br>
+                    <label for="txtProovedor">Nombre del proovedor:</label>
+                </div>
+
+                <div id="cajaTxt">
+                    <input id="txtCodigo" type="text" placeholder="Ingresa un codigo">
+                    <br><br>
+                    <input id="txtNombre" type="text" placeholder="Ingresa el nombre">
+                    <br><br>
+                    <input id="txtPrecio" type="text" placeholder="Ingresa el precio">
+                    <br><br>
+                    <input id="txtInventario" type="text" placeholder="Ingresa la cantidad">
+                    <br><br>
+                    <input id="txtProovedor" type="text" placeholder="Ingresa un codigo">
+                </div>
+
+                <div id="caja-btn"><button id="boton" onclick="insertar();">AGREGAR</button></div>
+
+                <div id="imagen"><img src="./img/registros.png" alt="" class="img-responsive"></div>
+            </div>
+
+            <div id="panel2">
+                <h3>LISTA DE INVENTARIOS</h3>
+
+                <div id="box-tabla">
+                    <table id="tabla">
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Inventario</th>
+                            <th>Proovedor</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function insertar(){
+        var cod = document.getElementById("txtCodigo").value;
+        var nom = document.getElementById("txtNombre").value;
+        var pre = document.getElementById("txtPrecio").value;
+        var inv = document.getElementById("txtInventario").value;
+        var pro = document.getElementById("txtProovedor").value;
+
+        llenado(cod, nom, pre, inv, pro);
+    }
+
+    function llenado(cod, nom, pre, inv, pro){
+        var tabla = document.getElementById('tabla');
+        var cuerpo = document.createElement('tbody');
+
+        var newFila = document.createElement('tr');
+        var newColumna1 = document.createElement('td');
+        var newColumna2 = document.createElement('td');
+        var newColumna3 = document.createElement('td');
+        var newColumna4 = document.createElement('td');
+        var newColumna5 = document.createElement('td');
+
+        newColumna1.innerText=cod;
+        newColumna2.innerText=nom;
+        newColumna3.innerText=pre;
+        newColumna4.innerText=inv;
+        newColumna5.innerText=pro;
+
+        newFila.appendChild(newColumna1);
+        newFila.appendChild(newColumna2);
+        newFila.appendChild(newColumna3);
+        newFila.appendChild(newColumna4);
+        newFila.appendChild(newColumna5);
+
+        cuerpo.appendChild(newFila);
+
+        tabla.appendChild(cuerpo);
+    }
+
+</script>
+    
+
+</html>
