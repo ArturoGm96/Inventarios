@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script src="./js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <div class="container-fluid">
         <h1 id="title">Sistema de Inventarios</h1>
@@ -109,6 +110,61 @@
         tabla.appendChild(cuerpo);
     }
 
+</script>
+
+<!---CODIGO JQUERY--->
+<script>
+    $(document).ready(function(){
+        $("#txtCodigo").keypress(function(){
+            $("#txtCodigo").css({"background": "#2A5B9E"});
+            $("#txtCodigo").css({"color": "#fff"});
+        });
+
+        $("#txtCodigo").keyup(function(){
+            $("#txtCodigo").css({"background": "#fff"});
+            $("#txtCodigo").css({"color": "#2A5B9E"});
+        });
+
+        $("#txtNombre").keypress(function(){
+            $("#txtNombre").css({"background": "#2A5B9E"});
+            $("#txtNombre").css({"color": "#fff"});
+        });
+
+        $("#txtNombre").keyup(function(){
+            $("#txtNombre").css({"background": "#fff"});
+            $("#txtNombre").css({"color": "#2A5B9E"});
+        });
+
+        $("#txtPrecio").keypress(function(){
+            $("#txtPrecio").css({"background": "#2A5B9E"});
+            $("#txtPrecio").css({"color": "#fff"});
+        });
+
+        $("#txtPrecio").keyup(function(){
+            $("#txtPrecio").css({"background": "#fff"});
+            $("#txtPrecio").css({"color": "#2A5B9E"});
+        });
+
+        $("#txtInventario").keypress(function(){
+            $("#txtInventario").css({"background": "#2A5B9E"});
+            $("#txtInventario").css({"color": "#fff"});
+        });
+
+        $("#txtInventario").keyup(function(){
+            $("#txtInventario").css({"background": "#fff"});
+            $("#txtInventario").css({"color": "#2A5B9E"});
+        });
+
+        $("#txtProovedor").keypress(function(){
+            $("#txtProovedor").css({"background": "#2A5B9E"});
+            $("#txtProovedor").css({"color": "#fff"});
+        });
+
+        $("#txtProovedor").keyup(function(){
+            $("#txtProovedor").css({"background": "#fff"});
+            $("#txtProovedor").css({"color": "#2A5B9E"});
+        });
+    })
 </script>
     
 

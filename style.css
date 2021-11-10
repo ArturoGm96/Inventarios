@@ -21,7 +21,7 @@
 
 #panel1{
   border: solid 2px #fff;
-  height: 80vh;
+  height: 85vh;
   width: 45%;
   background-color: #7287A3;
   margin-right: 5px;
@@ -87,15 +87,17 @@ input{
   width: 100%;
   background-color: transparent;
   text-align: center;
+  height: 250px;
 }
 
 img{
+  height: 220px;
   border-radius: 50%;
 }
 
 #panel2{
   border: solid 2px #fff;
-  height: 80vh;
+  height: 85vh;
   width: 45%;
   background-color: rgb(209, 98, 57);
 }
